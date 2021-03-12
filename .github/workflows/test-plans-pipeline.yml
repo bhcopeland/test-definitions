@@ -16,6 +16,10 @@ jobs:
         with:
           python-version: '3.x'
 
+      - shell: bash
+        env:
+          QA_REPORTS_KNOWN_ISSUE_TOKEN: ${{ secrets.QA_REPORTS_KNOWN_ISSUE_TOKEN }}
+
       - name: Install deps
         run: |
          python -m pip install --upgrade pip
